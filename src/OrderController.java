@@ -6,5 +6,11 @@ public class OrderController {
         this.model = model;
         this.view = view;
 
-        }
+    }
+    public void add(OrderItem i){
+        model.addItem(i);
+        double t = model.getTotalPrice();
+        String o = model.toString();
+        view.setItems(i);
+    }
 }

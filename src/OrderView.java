@@ -103,4 +103,19 @@ public abstract class OrderView extends JFrame implements ActionListener {
             orderModel.addItem(combo2);
         }
     }
+
+    public void setItems(OrderItem i){
+        this.setItems(i);
+    }
+
+    public static void main(String[] args) {
+        OrderModel orderModel = new OrderModel();
+        OrderView orderView = new OrderView(orderModel) {
+            @Override
+            protected void initializeComponents() {
+                super.initializeComponents();
+            }
+        };
+        orderView.initializeComponents();
+    }
 }
